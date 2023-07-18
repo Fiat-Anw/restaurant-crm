@@ -20,13 +20,13 @@ const SimpleSidebar = ({ children }) => {
         size="full"
       >
         <DrawerContent>
-          <SidebarContent />
+          <SidebarContent onClose={onClose} />
         </DrawerContent>
       </Drawer>
 
       {/* mobile */}
       <MobileSidebar display={{ base: "flex", md: "none" }} onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 60 }} p="4">
+      <Box ml={{ base: 0, md: "300px" }} p="4">
         {children}
       </Box>
     </Box>

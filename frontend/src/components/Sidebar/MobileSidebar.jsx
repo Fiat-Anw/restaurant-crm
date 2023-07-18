@@ -9,7 +9,8 @@ const MobileSidebar = ({ onOpen, ...rest }) => {
       px={{ base: 4, md: 24 }}
       height="20"
       alignItems="center"
-      borderBottomWidth="1px"
+      shadow="md"
+      bgColor="white"
       justifyContent="flex-start"
       {...rest}
     >
@@ -21,7 +22,7 @@ const MobileSidebar = ({ onOpen, ...rest }) => {
       />
 
       <Text fontSize="2xl" ml="8" fontWeight="bold">
-        Logo
+        TableTrack
       </Text>
     </Flex>
   );

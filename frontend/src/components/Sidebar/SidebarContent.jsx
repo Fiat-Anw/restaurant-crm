@@ -8,11 +8,15 @@ import { BsFillFileBarGraphFill } from "react-icons/bs";
 const SidebarContent = ({ onClose, ...rest }) => {
   return (
     <Box
-      w={{ base: "full", md: 60 }}
+      w={{ base: "full", md: "260px" }}
+      borderRadius="3xl"
       pos="fixed"
-      h="full"
-      {...rest}
+      left={{ base: "0", md: "20px" }}
+      top={{ base: "0", md: "2.5%" }}
+      h={{ base: "100%", md: "95%" }}
+      bg="white"
       shadow="lg"
+      {...rest}
     >
       <Flex
         h="20"
@@ -22,7 +26,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
         mb={12}
         justifyContent="space-between"
       >
-        <Text fontSize="2xl" fontWeight="bold">
+        <Text fontSize="3xl" fontWeight="extrabold">
           TableTrack
         </Text>
         <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />

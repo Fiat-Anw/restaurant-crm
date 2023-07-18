@@ -5,6 +5,14 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "@fontsource-variable/noto-sans-thai";
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      "html, body": {
+        bgGradient: "linear(to-b, green.50, pink.100)",
+        lineHeight: 1.5,
+      },
+    },
+  },
   fonts: {
     heading: `'Noto Sans Thai Variable', sans-serif`,
     body: `'Noto Sans Thai Variable', sans-serif`,
