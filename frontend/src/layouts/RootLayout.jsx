@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
-import { Text } from "@chakra-ui/react";
+import Sidebar from "../components/Sidebar";
 
 const RootLayout = () => {
   return (
-    <div>
-      <Text>Root layout</Text>
+    <>
+      <Sidebar />
       <Outlet />
-    </div>
+    </>
   );
 };
 
