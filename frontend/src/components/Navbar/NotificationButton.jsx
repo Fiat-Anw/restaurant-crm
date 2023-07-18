@@ -27,29 +27,20 @@ const NotificationButton = () => {
       </MenuButton>
 
       <MenuList alignItems={"center"} borderRadius="xl">
-        <br />
-        <Center>
-          <Avatar
-            size="2xl"
-            name="Dan Abrahmov"
-            src="https://bit.ly/dan-abramov"
-          />
-        </Center>
-        <br />
-        <Center>
-          <Text fontSize="xl" fontWeight="bold">
-            Dan Abromov
-          </Text>
-        </Center>
-        <br />
+        <MenuItem>
+          <Text fontSize="sm">New Order from #52136</Text>
+        </MenuItem>
 
         <MenuDivider />
 
         <MenuItem>
-          <Text fontSize="sm">Account Settings</Text>
+          <Text fontSize="sm">New Order from #52125</Text>
         </MenuItem>
+
+        <MenuDivider />
+
         <MenuItem>
-          <Text fontSize="sm">Logout</Text>
+          <Text fontSize="sm">New Order from #52122</Text>
         </MenuItem>
       </MenuList>
     </Menu>
