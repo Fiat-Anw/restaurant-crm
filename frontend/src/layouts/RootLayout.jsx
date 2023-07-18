@@ -1,11 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 
 const RootLayout = () => {
   return (
     <>
-      <Sidebar />
-      <Outlet />
+      <Sidebar>
+        <Navbar />
+        <Outlet />
+      </Sidebar>
     </>
   );
 };

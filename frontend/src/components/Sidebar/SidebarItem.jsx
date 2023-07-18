@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import { Flex, Icon } from "@chakra-ui/react";
+import { Flex, Icon, Text } from "@chakra-ui/react";
 
 const SidebarItem = ({ icon, link, children, ...rest }) => {
   return (
@@ -12,13 +12,15 @@ const SidebarItem = ({ icon, link, children, ...rest }) => {
         borderRadius="lg"
         cursor="pointer"
         _hover={{
-          bg: "cyan.400",
+          bg: "pink.300",
           color: "white",
         }}
         {...rest}
       >
-        {icon && <Icon mr="4" as={icon} />}
-        {children}
+        <Flex alignItems="center">
+          {icon && <Icon mr={4} as={icon} />}
+          <Text fontSize="md">{children}</Text>
+        </Flex>
       </Flex>
     </Link>
   );

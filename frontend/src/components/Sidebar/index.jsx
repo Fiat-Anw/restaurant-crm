@@ -1,21 +1,31 @@
 /* eslint-disable react/prop-types */
-import { Box, Drawer, DrawerContent } from "@chakra-ui/react";
+import { Box, Drawer, DrawerContent, useDisclosure } from "@chakra-ui/react";
 
 import SidebarContent from "./SidebarContent";
 import MobileSidebar from "./MobileSidebar";
 
 const SimpleSidebar = ({ children }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Box minH="100vh">
       <SidebarContent display={{ base: "none", md: "block" }} />
-      <Drawer placement="left" size="full">
+      <Drawer
+        autoFocus={false}
+        isOpen={isOpen}
+        placement="left"
+        onClose={onClose}
+        returnFocusOnClose={false}
+        onOverlayClick={onClose}
+        size="full"
+      >
         <DrawerContent>
           <SidebarContent />
         </DrawerContent>
       </Drawer>
 
       {/* mobile */}
-      <MobileSidebar display={{ base: "flex", md: "none" }} />
+      <MobileSidebar display={{ base: "flex", md: "none" }} onOpen={onOpen} />
       <Box ml={{ base: 0, md: 60 }} p="4">
         {children}
       </Box>
