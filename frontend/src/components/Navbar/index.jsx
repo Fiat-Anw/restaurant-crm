@@ -7,7 +7,7 @@ const Navbar = () => {
     <>
       <Box bg="transparent" px={4}>
         <Flex justifyContent="flex-end">
-          <Flex gap={6} alignItems="center">
+          <Flex gap={4} alignItems="center">
             <NotificationButton />
 
             <Flex
@@ -16,8 +16,7 @@ const Navbar = () => {
               py={2}
               borderRadius="full"
               bgColor="white"
-              shadow="lg"
-              _hover={{ bgColor: "white" }}
+              shadow="md"
             >
               <Stack gap={0}>
                 <Text fontSize="sm" fontWeight="bold">

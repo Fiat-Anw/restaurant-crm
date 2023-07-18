@@ -7,7 +7,7 @@ const MobileSidebar = ({ onOpen, ...rest }) => {
     <Flex
       ml={{ base: 0, md: 60 }}
       px={{ base: 4, md: 24 }}
-      height="20"
+      height="14"
       alignItems="center"
       shadow="md"
       bgColor="white"
@@ -15,13 +15,13 @@ const MobileSidebar = ({ onOpen, ...rest }) => {
       {...rest}
     >
       <IconButton
-        variant="outline"
+        variant="ghost"
         onClick={onOpen}
         aria-label="open menu"
         icon={<FiMenu />}
       />
 
-      <Text fontSize="2xl" ml="8" fontWeight="bold">
+      <Text fontSize="2xl" ml="8" fontWeight="bold" mx="auto">
         TableTrack
       </Text>
     </Flex>

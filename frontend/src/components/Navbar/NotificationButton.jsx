@@ -3,9 +3,7 @@ import {
   Button,
   Menu,
   MenuButton,
-  Avatar,
   MenuList,
-  Center,
   MenuDivider,
   MenuItem,
   Text,
@@ -18,7 +16,7 @@ const NotificationButton = () => {
       <MenuButton
         as={Button}
         rounded={"full"}
-        variant={"link"}
+        variant="ghost"
         cursor={"pointer"}
         minW={0}
         _hover={{ color: "pink.500" }}
