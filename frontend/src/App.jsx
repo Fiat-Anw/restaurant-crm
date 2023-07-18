@@ -1,31 +1,24 @@
-import { Text } from "@chakra-ui/react";
-
 import {
-  Outlet,
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
+  Navigate,
 } from "react-router-dom";
+import RootLayout from "./layouts/RootLayout";
+import Dashboard from "./pages/Dashboard";
+import Account from "./pages/Account";
+import Calendar from "./pages/Calendar";
+import Management from "./pages/Management";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route
-      path="/"
-      element={
-        <>
-          <Text fontWeight="bold" bgColor="red.500" color="white" h={24}>
-            This is just a Layout Example. Change path in url to test route. Or
-            Feel free to delete all of this.
-          </Text>
-          <Outlet />
-        </>
-      }
-    >
-      <Route path="/" element={<Text>default route in /</Text>} />
-      <Route path="/111" element={<Text>You are in /111</Text>} />
-      <Route path="/222" element={<Text>You are in /222</Text>} />
-      <Route path="/333" element={<Text>You are in /333</Text>} />
+    <Route path="/" element={<RootLayout />}>
+      <Route path="/" element={<Navigate to="/dashboard" replace />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/account" element={<Account />} />
+      <Route path="/calendar" element={<Calendar />} />
+      <Route path="/management" element={<Management />} />
     </Route>
   )
 );
